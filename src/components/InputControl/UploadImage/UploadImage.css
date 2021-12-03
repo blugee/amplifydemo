@@ -1,0 +1,54 @@
+.imageUploadControl {
+ width:80%;
+ height: auto;
+}
+
+.imageUploadWrrapper > .ant-upload-list > div {
+  display: none;
+}
+
+.imageUploadControl > img {
+  width:80%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.deleteIcon{
+margin-left: -2px !important;
+}
+
+@media only screen and (max-width: 1462px) {
+  .imageUploadControl {
+    height: 80%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1206px) {
+  .imageUploadControl {
+    height: 80%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1108px) {
+  .imageUploadControl {
+    height: 90%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .imageUploadControl {
+    height: 90%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 964px) {
+    .imageUploadControl {
+      height: 90%;
+      width: auto;
+    }
+  }
+

@@ -1,0 +1,9 @@
+#set( $updateList = {} )
+#foreach( $entry in $ctx.args.updatePendingReportInput.keySet() )
+  #set( $discard = $updateList.put($entry, "'$ctx.args.updatePendingReportInput[$entry]'") )
+#end
+#set( $update = $updateList.toString().replace("{","").replace("}","") )
+{
+  "version": "2018-05-29",
+  "statements":   ["UPDATE PendingReport SET $update WHERE id=$ctx.args.updatePendingReportInput.id", "SELECT * FROM PendingReport WHERE id=$ctx.args.updatePendingReportInput.id"]
+}

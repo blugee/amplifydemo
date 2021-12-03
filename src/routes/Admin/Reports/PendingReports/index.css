@@ -1,0 +1,43 @@
+.profile .ant-input[disabled] {
+  color: black;
+}
+
+.error-report {
+  text-align: center;
+}
+
+/* .ant-modal-content {
+  border-radius: 12px !important;
+  padding: 50px;
+} */
+
+.report-modal-contentimg {
+  vertical-align: bottom;
+}
+
+.report-modal-content {
+  display: inline-block;
+  contain: content;
+}
+
+.confirm-popup-content2 {
+  /* padding: 50px; */
+}
+
+.ant-spin-lg .ant-spin-dot {
+  font-size: 32px;
+  /* margin-bottom: 60px; */
+}
+
+.confirm-popup-text {
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: medium;
+  margin-top: 20px;
+}
+
+.buttonAsLink {
+  margin: 0px;
+  padding: 0px;
+  margin-right: 0px;
+}

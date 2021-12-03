@@ -1,0 +1,89 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "2018-05-24T17:52:00Z",
+      "title": "CustomerRestAPI"
+    },
+    "host": "shyrvbygq3.execute-api.us-east-1.amazonaws.com",
+    "basePath": "/dev",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/customers/licenseInformation": {
+        "options": {
+          "consumes": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "headers": {
+                "Access-Control-Allow-Origin": {
+                  "type": "string"
+                },
+                "Access-Control-Allow-Methods": {
+                  "type": "string"
+                },
+                "Access-Control-Allow-Headers": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-any-method": {
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "RequestSchema",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/RequestSchema"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "schema": {
+                "$ref": "#/definitions/ResponseSchema"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "RequestSchema": {
+        "type": "object",
+        "required": [
+          "request"
+        ],
+        "properties": {
+          "request": {
+            "type": "string"
+          }
+        },
+        "title": "Request Schema"
+      },
+      "ResponseSchema": {
+        "type": "object",
+        "required": [
+          "response"
+        ],
+        "properties": {
+          "response": {
+            "type": "string"
+          }
+        },
+        "title": "Response Schema"
+      }
+    }
+  }

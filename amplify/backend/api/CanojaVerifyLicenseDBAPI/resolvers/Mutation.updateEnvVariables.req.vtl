@@ -1,0 +1,9 @@
+#set( $updateList = {} )
+#foreach( $entry in $ctx.args.updateEnvVariablesInput.keySet() )
+  #set( $discard = $updateList.put($entry, "'$ctx.args.updateEnvVariablesInput[$entry]'") )
+#end
+#set( $update = $updateList.toString().replace("{","").replace("}","") )
+{
+  "version": "2018-05-29",
+  "statements":   ["UPDATE EnvVariables SET $update WHERE id=$ctx.args.updateEnvVariablesInput.id", "SELECT * FROM EnvVariables WHERE id=$ctx.args.updateEnvVariablesInput.id"]
+}

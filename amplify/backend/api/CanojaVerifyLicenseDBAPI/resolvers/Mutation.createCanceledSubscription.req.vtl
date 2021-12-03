@@ -1,0 +1,12 @@
+#set( $cols = [] )
+#set( $vals = [] )
+#foreach( $entry in $ctx.args.createCanceledSubscriptionInput.keySet() )
+  #set( $discard = $cols.add($entry) )
+  #set( $discard = $vals.add("'$ctx.args.createCanceledSubscriptionInput[$entry]'") )
+#end
+#set( $valStr = $vals.toString().replace("[","(").replace("]",")") )
+#set( $colStr = $cols.toString().replace("[","(").replace("]",")") )
+{
+  "version": "2018-05-29",
+  "statements":   ["INSERT INTO CanceledSubscription $colStr VALUES $valStr", "SELECT * FROM CanceledSubscription WHERE id=$ctx.args.createCanceledSubscriptionInput.id"]
+}

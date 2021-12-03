@@ -1,0 +1,18 @@
+#set( $cols = [] )
+#set( $vals = [] )
+#set( $tempValue = '' )
+#foreach( $entry in $ctx.args.createPurchaseReportInput.keySet() )
+#set( $discard = $cols.add($entry) )
+#if( $entry == 'filter')
+#set ($tempValue = $ctx.args.createPurchaseReportInput[$entry].replace("'", "''"))
+#set( $discard = $vals.add("'$tempValue'") )
+#else
+#set( $discard = $vals.add("'$ctx.args.createPurchaseReportInput[$entry]'") )
+#end
+#end
+#set( $valStr = $vals.toString().replace("[","(").replace("]",")") )
+#set( $colStr = $cols.toString().replace("[","(").replace("]",")") )
+{
+"version": "2018-05-29",
+"statements": ["INSERT INTO PurchaseReport $colStr VALUES $valStr", "SELECT * FROM PurchaseReport WHERE uniqueId='$ctx.args.createPurchaseReportInput.uniqueId'"]
+}

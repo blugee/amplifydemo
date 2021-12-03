@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/customers",
+            "lambdaFunction": "CustomerRestAPI",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "CustomerRestAPI",
+    "apiName": "CustomerRestAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "CustomerRestAPI"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-canojaclientadmin2-staging-170720-authRole",
+        "unAuthRoleName": "amplify-canojaclientadmin2-staging-170720-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "CustomerRestAPI",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

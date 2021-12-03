@@ -1,0 +1,8 @@
+#**
+  Select statement for a relational database data source
+*#
+
+{
+  "version": "2018-05-29",
+  "statements":   ["SELECT * FROM LicenseInformation WHERE csvRowUniqueKey = '$ctx.args.csvRowUniqueKey'", "DELETE FROM LicenseInformation WHERE id != 0 and csvRowUniqueKey = '$ctx.args.csvRowUniqueKey'"]
+}

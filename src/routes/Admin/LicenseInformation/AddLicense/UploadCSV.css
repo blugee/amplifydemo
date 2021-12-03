@@ -1,0 +1,16 @@
+/* .export-csv-styles{
+    text-align-last: center;
+} */
+
+.ant-upload-list {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #545454;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    line-height: 1.3;
+    display: inline-block;
+}

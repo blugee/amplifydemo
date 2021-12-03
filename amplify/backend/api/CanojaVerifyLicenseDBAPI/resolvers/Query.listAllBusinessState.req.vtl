@@ -1,0 +1,14 @@
+#**
+  Select statement for a relational database data source
+*#
+#set( $filter = $ctx.args.filter)
+
+#if($util.isNull($ctx.args.filter))
+	#set( $filter = "active = 'true'")
+#end
+{
+    "version": "2018-05-29",
+    "statements": [
+        "select DISTINCT(businessState) as items from LicenseInformation where $filter order by businessState ASC"
+    ]
+}

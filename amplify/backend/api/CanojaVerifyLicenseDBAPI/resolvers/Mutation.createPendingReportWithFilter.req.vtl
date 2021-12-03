@@ -1,0 +1,18 @@
+#set( $cols = [] )
+#set( $vals = [] )
+#set( $tempValue = '' )
+#foreach( $entry in $ctx.args.createPendingReportInput.keySet() )
+#set( $discard = $cols.add($entry) )
+#if( $entry == 'filter')
+#set ($tempValue = $ctx.args.createPendingReportInput[$entry].replace("'", "''"))
+#set( $discard = $vals.add("'$tempValue'") )
+#else
+#set( $discard = $vals.add("'$ctx.args.createPendingReportInput[$entry]'") )
+#end
+#end
+#set( $valStr = $vals.toString().replace("[","(").replace("]",")") )
+#set( $colStr = $cols.toString().replace("[","(").replace("]",")") )
+{
+"version": "2018-05-29",
+"statements": ["INSERT INTO PendingReport $colStr VALUES $valStr", "SELECT * FROM PendingReport WHERE uniqueId='$ctx.args.createPendingReportInput.uniqueId'"]
+}

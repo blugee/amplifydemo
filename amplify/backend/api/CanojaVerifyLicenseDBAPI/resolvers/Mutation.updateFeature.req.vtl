@@ -1,0 +1,9 @@
+#set( $updateList = {} )
+#foreach( $entry in $ctx.args.updateFeatureInput.keySet() )
+  #set( $discard = $updateList.put($entry, "'$ctx.args.updateFeatureInput[$entry]'") )
+#end
+#set( $update = $updateList.toString().replace("{","").replace("}","") )
+{
+  "version": "2018-05-29",
+  "statements":   ["UPDATE Feature SET $update WHERE id=$ctx.args.updateFeatureInput.id", "SELECT * FROM Feature WHERE id=$ctx.args.updateFeatureInput.id"]
+}

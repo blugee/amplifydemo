@@ -1,0 +1,12 @@
+#set( $cols = [] )
+#set( $vals = [] )
+#foreach( $entry in $ctx.args.createCustomersInput.keySet() )
+  #set( $discard = $cols.add($entry) )
+  #set( $discard = $vals.add("'$ctx.args.createCustomersInput[$entry]'") )
+#end
+#set( $valStr = $vals.toString().replace("[","(").replace("]",")") )
+#set( $colStr = $cols.toString().replace("[","(").replace("]",")") )
+{
+  "version": "2018-05-29",
+  "statements":   ["INSERT INTO Customers $colStr VALUES $valStr", "SELECT * FROM Customers WHERE id=$ctx.args.createCustomersInput.id"]
+}

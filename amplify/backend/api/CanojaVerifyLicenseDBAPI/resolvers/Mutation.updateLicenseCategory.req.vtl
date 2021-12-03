@@ -1,0 +1,9 @@
+#set( $updateList = {} )
+#foreach( $entry in $ctx.args.updateLicenseCategoryInput.keySet() )
+  #set( $discard = $updateList.put($entry, "'$ctx.args.updateLicenseCategoryInput[$entry]'") )
+#end
+#set( $update = $updateList.toString().replace("{","").replace("}","") )
+{
+  "version": "2018-05-29",
+  "statements":   ["UPDATE LicenseCategory SET $update WHERE id=$ctx.args.updateLicenseCategoryInput.id", "SELECT * FROM LicenseCategory WHERE id=$ctx.args.updateLicenseCategoryInput.id"]
+}

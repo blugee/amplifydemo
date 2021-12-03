@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/paymentgateway",
+      "lambdaFunction": "CanojaPaymentGateway",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/paymentgateway"
+    }
+  ],
+  "resourceName": "CanojaPaymentGateway",
+  "apiName": "CanojaPaymentGateway",
+  "functionArns": [
+    {
+      "lambdaFunction": "CanojaPaymentGateway"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-canoja-client-admin-2-staging-153424-authRole",
+    "unAuthRoleName": "amplify-canoja-client-admin-2-staging-153424-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "CanojaPaymentGateway",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

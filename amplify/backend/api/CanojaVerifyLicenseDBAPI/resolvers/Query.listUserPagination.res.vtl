@@ -1,0 +1,20 @@
+## Raise a GraphQL field error in case of a datasource invocation error
+#if($ctx.error)
+    $utils.error($ctx.error.message, $ctx.error.type)
+#end
+
+#set( $items = $utils.rds.toJsonObject($ctx.result)[0] )
+#set( $total = $utils.rds.toJsonObject($ctx.result)[1][0].total)
+
+## calculate total pages
+#set( $total_pages = $total / $ctx.stash.limit) 
+#if( ($total_pages*$ctx.stash.limit) < $total )
+	#set( $total_pages = $total_pages + 1 )
+#end
+
+#set( $result = {
+            "items": $items ,
+            "total": $total ,
+            "total_pages": $total_pages
+        } )
+$utils.toJson($result)

@@ -1,0 +1,20 @@
+.recharts-default-tooltip {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    color: #fa8c15;
+    padding: 5px;
+}
+
+.recharts-tooltip-item-list  {
+    color: #038fde !important;
+}
+
+.header-button-content {
+    display: inline-block;
+    contain: content;
+  }
+
+  .ant-form-horizontal .ant-row {
+    margin-left: -15px;
+    margin-right: 0px;
+}

@@ -1,0 +1,1211 @@
+input CreateCityInput {
+  id: Int
+  name: String!
+  code: String!
+  active: String!
+}
+
+type City {
+  id: Int
+  name: String!
+  code: String!
+  active: String!
+}
+
+input UpdateCityInput {
+  id: Int!
+  name: String
+  code: String
+  active: String
+}
+
+input CreateCountryInput {
+  id: Int
+  name: String!
+  code: String!
+  active: String!
+}
+
+type Country {
+  id: Int
+  name: String!
+  code: String!
+  active: String!
+}
+
+input UpdateCountryInput {
+  id: Int!
+  name: String
+  code: String
+  active: String
+}
+
+input CreateFeatureInput {
+  id: Int
+  name: String!
+  subscriptionPlanId: String!
+  isAllowNameSearch: String!
+  isAllowLicenseNumberSearch: String!
+  isAllowLicenseCategorySearch: String!
+  isAllowCitySearch: String!
+  isAllowStateSearch: String!
+  isAllowCountrySearch: String!
+  isAllowLicenseTypeSearch: String!
+  isAllowLicenseStatusSearch: String!
+  isAllowLicenseOwnerSearch: String!
+  isAllowLicenseIssueDateSearch: String!
+  isAllowLicenseExpireDateSearch: String!
+  isAllowDBASearch: String!
+  isAllowCountySearch: String!
+  isAllowPostalCodeSearch: String!
+  isAllowPhoneNumberSearch: String!
+  isAllowEmailSearch: String!
+  isAllowLastUpdatedDateSearch: String!
+  active: String!
+}
+
+type Feature {
+  id: Int
+  name: String!
+  subscriptionPlanId: String!
+  isAllowNameSearch: String!
+  isAllowLicenseNumberSearch: String!
+  isAllowLicenseCategorySearch: String!
+  isAllowCitySearch: String!
+  isAllowStateSearch: String!
+  isAllowCountrySearch: String!
+  isAllowLicenseTypeSearch: String!
+  isAllowLicenseStatusSearch: String!
+  isAllowLicenseOwnerSearch: String!
+  isAllowLicenseIssueDateSearch: String!
+  isAllowLicenseExpireDateSearch: String!
+  isAllowDBASearch: String!
+  isAllowCountySearch: String!
+  isAllowPostalCodeSearch: String!
+  isAllowPhoneNumberSearch: String!
+  isAllowEmailSearch: String!
+  isAllowLastUpdatedDateSearch: String!
+  active: String!
+}
+
+input UpdateFeatureInput {
+  id: Int!
+  name: String
+  subscriptionPlanId: String
+  isAllowNameSearch: String
+  isAllowLicenseNumberSearch: String
+  isAllowLicenseCategorySearch: String
+  isAllowCitySearch: String
+  isAllowStateSearch: String
+  isAllowCountrySearch: String
+  isAllowLicenseTypeSearch: String
+  isAllowLicenseStatusSearch: String
+  isAllowLicenseOwnerSearch: String
+  isAllowLicenseIssueDateSearch: String
+  isAllowLicenseExpireDateSearch: String
+  isAllowDBASearch: String
+  isAllowCountySearch: String
+  isAllowPostalCodeSearch: String
+  isAllowPhoneNumberSearch: String
+  isAllowEmailSearch: String
+  isAllowLastUpdatedDateSearch: String
+  active: String
+}
+
+input CreateGeneralSettingInput {
+  id: Int
+  mapCardUpdateDate: String!
+  copyrightText: String!
+  signupAgreementDetails: String!
+  subscriptionAgreementDetails: String!
+  supportPageDetails: String!
+  dashboardPageDetails: String!
+}
+
+type GeneralSetting {
+  id: Int
+  mapCardUpdateDate: String!
+  copyrightText: String!
+  signupAgreementDetails: String
+  subscriptionAgreementDetails: String
+  supportPageDetails: String
+  dashboardPageDetails: String
+}
+
+input UpdateGeneralSettingInput {
+  id: Int!
+  mapCardUpdateDate: String
+  copyrightText: String
+  signupAgreementDetails: String
+  subscriptionAgreementDetails: String
+  supportPageDetails: String
+  dashboardPageDetails: String
+}
+
+input CreateLicenseCategoryInput {
+  id: Int
+  name: String!
+  active: String!
+}
+
+type LicenseCategory {
+  id: Int
+  name: String!
+  active: String!
+}
+
+input UpdateLicenseCategoryInput {
+  id: Int!
+  name: String
+  active: String
+}
+
+input CreateLicenseInformationInputWithBatch {
+  query: String!
+}
+
+input CreateLicenseInformationInput {
+  id: Int
+  csvRowUniqueKey: String
+  licenseNumber: String
+  licenseCategory: String
+  licenseType: String
+  licenseStatus: String
+  licenseIssueDate: String
+  licenseExpireDate: String
+  licenseOwner: String
+  retail: String
+  medical: String
+  businessLegalName: String
+  businessDoingBusinessAs: String
+  businessAddress1: String
+  businessAddress2: String
+  businessCity: String
+  businessCounty: String
+  businessState: String
+  businessZipcode: String
+  businessCountry: String
+  businessPhoneNumber: String
+  businessEmailAddress: String
+  businessStructure: String
+  created_at: String
+  updated_at: String
+  active: String
+}
+
+type LicenseInformationResult {
+  items: [LicenseInformation]
+  total: Int
+  total_pages: Int
+}
+
+type PurchaseReportResult {
+  items: [PurchaseReport]
+  total: Int
+  total_pages: Int
+}
+
+type PendingReportResult {
+  items: [PendingReport]
+  total: Int
+  total_pages: Int
+}
+
+type UserResult {
+  items: [User]
+  total: Int
+  total_pages: Int
+}
+
+type CountLicenseInformationResult {
+  total: Int
+}
+
+type LicenseInformation {
+  id: Int
+  csvRowUniqueKey: String
+  licenseNumber: String
+  licenseCategory: String
+  licenseType: String
+  licenseStatus: String
+  licenseIssueDate: String
+  licenseExpireDate: String
+  licenseOwner: String
+  retail: String
+  medical: String
+  businessLegalName: String
+  businessDoingBusinessAs: String
+  businessAddress1: String
+  businessAddress2: String
+  businessCity: String
+  businessCounty: String
+  businessState: String
+  businessZipcode: String
+  businessCountry: String
+  businessPhoneNumber: String
+  businessEmailAddress: String
+  businessStructure: String
+  last_updated: String
+  created_at: String
+  updated_at: String
+  active: String
+}
+
+input UpdateLicenseInformationInput {
+  id: Int!
+  csvRowUniqueKey: String
+  licenseNumber: String
+  licenseCategory: String
+  licenseType: String
+  licenseStatus: String
+  licenseIssueDate: String
+  licenseExpireDate: String
+  licenseOwner: String
+  retail: String
+  medical: String
+  last_updated: String
+  businessLegalName: String
+  businessDoingBusinessAs: String
+  businessAddress1: String
+  businessAddress2: String
+  businessCity: String
+  businessCounty: String
+  businessState: String
+  businessZipcode: String
+  businessCountry: String
+  businessPhoneNumber: String
+  businessEmailAddress: String
+  businessStructure: String
+  created_at: String
+  updated_at: String
+  active: String
+}
+
+input CreateLicenseMainFilterListInput {
+  id: Int
+  filterOrder: String!
+  name: String!
+  filter: String!
+  active: String!
+}
+
+type LicenseMainFilterList {
+  id: Int
+  filterOrder: String!
+  name: String!
+  filter: String!
+  active: String!
+}
+
+input UpdateLicenseMainFilterListInput {
+  id: Int!
+  filterOrder: String
+  name: String
+  filter: String
+  active: String
+}
+
+input CreateLicenseStatusInput {
+  id: Int
+  name: String!
+  active: String!
+}
+
+type LicenseStatus {
+  id: Int
+  name: String!
+  active: String!
+}
+
+input UpdateLicenseStatusInput {
+  id: Int!
+  name: String
+  active: String
+}
+
+input CreateNoteInput {
+  id: Int
+  notes: String!
+}
+
+type Note {
+  id: Int
+  notes: String!
+}
+
+input UpdateNoteInput {
+  id: Int!
+  notes: String
+}
+
+input CreatePendingReportInput {
+  id: Int
+  name: String!
+  username: String!
+  purchaseDate: String!
+  reportType: String!
+  amount: String!
+  promotionCode: String
+  totalAmount: String!
+  discount: String!
+  reportName: String!
+  recordCost: String!
+  reportDescription: String!
+  filter: String
+  purchaseType: String!
+  title: String!
+  sorter: String
+  count: String
+  pageTotal: String!
+  downloadStatus: String!
+  createdAt: AWSTimestamp
+  uniqueId: String!
+  isFrom: String!
+}
+
+type DownloadPendingReportResult {
+  items: [PendingReport]
+}
+
+type SubscriptionPlanByFilterResult {
+  items: [SubscriptionPlan]
+}
+
+type FeatureByFilterResult {
+  items: [Feature]
+}
+
+type PendingReport {
+  id: Int
+  name: String!
+  username: String!
+  purchaseDate: String!
+  reportType: String!
+  amount: String!
+  promotionCode: String
+  totalAmount: String!
+  discount: String!
+  reportName: String!
+  recordCost: String!
+  reportDescription: String!
+  filter: String
+  purchaseType: String!
+  title: String!
+  sorter: String
+  count: String
+  pageTotal: String!
+  downloadStatus: String!
+  createdAt: String
+  uniqueId: String!
+  isFrom: String!
+}
+
+input UpdatePendingReportInput {
+  id: Int!
+  name: String
+  username: String
+  purchaseDate: String
+  reportType: String
+  amount: String
+  recordCost: String
+  promotionCode: String
+  totalAmount: String
+  discount: String
+  reportName: String
+  reportDescription: String
+  filter: String
+  purchaseType: String
+  title: String
+  sorter: String
+  count: String
+  pageTotal: String
+  downloadStatus: String
+  createdAt: String
+  uniqueId: String
+  isFrom: String
+}
+
+input CreatePurchaseReportInput {
+  id: Int
+  username: String!
+  reportType: String!
+  reportData: String!
+  datePurchase: String!
+  expirationDate: String!
+  csvFileName: String!
+  pdfFileName: String!
+  recordCost: String!
+  reportname: String!
+  description: String!
+  promotionCode: String!
+  totalAmount: String!
+  discount: String!
+  amount: String!
+  isFrom: String!
+  filter: String
+  sorter: String
+}
+
+type PurchaseReport {
+  id: Int
+  username: String!
+  reportType: String!
+  reportData: String!
+  datePurchase: String!
+  expirationDate: String!
+  csvFileName: String!
+  pdfFileName: String!
+  reportname: String!
+  description: String!
+  recordCost: String!
+  promotionCode: String!
+  totalAmount: String!
+  discount: String!
+  amount: String!
+  isFrom: String!
+  filter: String
+  sorter: String
+}
+
+input UpdatePurchaseReportInput {
+  id: Int!
+  username: String
+  reportType: String
+  reportData: String
+  datePurchase: String
+  recordCost: String
+  expirationDate: String
+  csvFileName: String
+  pdfFileName: String
+  reportname: String
+  description: String
+  promotionCode: String
+  totalAmount: String
+  discount: String
+  amount: String
+  isFrom: String
+  filter: String
+  sorter: String
+}
+
+input CreateStateInput {
+  id: Int
+  name: String!
+  abbreviation: String!
+  active: String!
+}
+
+type State {
+  id: Int
+  name: String!
+  abbreviation: String!
+  active: String!
+}
+
+input UpdateStateInput {
+  id: Int!
+  name: String
+  abbreviation: String
+  active: String
+}
+
+input CreateSubscriptionPlanInput {
+  id: Int
+  name: String!
+  planOrder: String!
+  amountPerMonth: String
+  amountPerYear: String
+  description1: String!
+  description2: String
+  priceIdMonth: String
+  priceIdYear: String
+  planDetails: String!
+  planInterval: String!
+  planType: String!
+  amountPerRecord: String!
+  active: String!
+}
+
+type SubscriptionPlan {
+  id: Int
+  name: String!
+  planOrder: String!
+  amountPerMonth: String
+  amountPerYear: String
+  description1: String!
+  description2: String
+  priceIdMonth: String
+  priceIdYear: String
+  planDetails: String!
+  planInterval: String!
+  planType: String!
+  amountPerRecord: String!
+  active: String!
+}
+
+input UpdateSubscriptionPlanInput {
+  id: Int!
+  name: String
+  planOrder: String
+  amountPerMonth: String
+  amountPerYear: String
+  description1: String
+  description2: String
+  priceIdMonth: String
+  priceIdYear: String
+  planDetails: String
+  planInterval: String
+  amountPerRecord: String
+  planType: String
+  active: String
+}
+
+input CreateUserInput {
+  id: Int
+  customerProfileId: String!
+  email: String!
+  accessKey: String!
+  active: String!
+  discount: String
+  planType: String
+  createdAt: String
+}
+
+type User {
+  id: Int
+  customerProfileId: String!
+  email: String!
+  accessKey: String!
+  active: String!
+  discount: String
+  planType: String
+  createdAt: String
+}
+
+
+input UpdateUserInput {
+  id: Int!
+  customerProfileId: String
+  email: String
+  accessKey: String
+  active: String
+  discount: String
+  planType: String
+  createdAt: String
+}
+
+type UserResultList {
+  items: [User]
+}
+
+type LicenseCategoryResultList {
+  items: String
+}
+
+type LicenseStatusResultList {
+  items: String
+}
+
+type LicenseTypeResultList {
+  items: String
+}
+
+type BusinessCountryResultList {
+  items: String
+}
+
+type BusinessStateResultList {
+  items: String
+}
+
+type BusinessStructureResultList {
+  items: String
+}
+
+type CreatePendingReportResult {
+  id: String
+}
+
+type CreatePurchaseReportResult {
+  id: String
+}
+
+type CreatedAtResultList {
+  items: String
+}
+
+type UpdatedAtResultList {
+  items: String
+}
+
+input CreatePricingInput {
+  id: Int
+  name: String
+  description: String
+  usageType: String
+  currency: String
+  productId: String
+  intervalTime: String
+  pricePerUnit: String
+  createdAt: AWSTimestamp
+  updatedAt: AWSTimestamp
+  active: String
+}
+
+type Pricing {
+  id: Int
+  name: String
+  description: String
+  usageType: String
+  currency: String
+  intervalTime: String
+  productId: String
+  pricePerUnit: String
+  createdAt: String
+  updatedAt: String
+  active: String
+}
+
+input UpdatePricingInput {
+  id: Int!
+  name: String
+  description: String
+  usageType: String
+  currency: String
+  productId: String
+  intervalTime: String
+  pricePerUnit: String
+  createdAt: String
+  updatedAt: AWSTimestamp
+  active: String
+}
+
+input CreateProductInput {
+  id: Int
+  name: String
+  description: String
+  createdAt: AWSTimestamp
+  updatedAt: AWSTimestamp
+  active: String
+}
+
+type ProductResultList {
+  items: [Product]
+}
+
+type PricingResultList {
+  items: [Pricing]
+}
+
+type Product {
+  id: Int
+  name: String
+  description: String
+  createdAt: String
+  updatedAt: String
+  active: String
+}
+
+input UpdateProductInput {
+  id: Int!
+  name: String
+  description: String
+  createdAt: String
+  updatedAt: AWSTimestamp
+  active: String
+}
+
+input CreateChargeInput {
+  id: Int
+  customerProfileId: String
+  customerPaymentProfileId: String
+  priceId: String
+  description: String
+  productName: String
+  noOfRecordsFetch: String
+  chargeAmount: String
+  pricePerUnit: String
+}
+
+type Charge {
+  id: Int
+  customerProfileId: String
+  customerPaymentProfileId: String
+  priceId: String
+  description: String
+  productName: String
+  noOfRecordsFetch: String
+  chargeAmount: String
+  pricePerUnit: String
+}
+
+input UpdateChargeInput {
+  id: Int!
+  customerProfileId: String
+  customerPaymentProfileId: String
+  priceId: String
+  description: String
+  productName: String
+  noOfRecordsFetch: String
+  chargeAmount: String
+  pricePerUnit: String
+}
+
+type CanceledSubscriptionResultList {
+  items: [CanceledSubscription]
+}
+
+input CreateCanceledSubscriptionInput {
+  id: Int
+  customerProfileId: String
+  subscriptionId: String
+  isCancelApplied: String
+  isCanceled: String
+}
+
+type CanceledSubscription {
+  id: Int
+  customerProfileId: String
+  subscriptionId: String
+  isCancelApplied: String
+  isCanceled: String
+}
+
+input UpdateCanceledSubscriptionInput {
+  id: Int!
+  customerProfileId: String
+  subscriptionId: String
+  isCancelApplied: String
+  isCanceled: String
+}
+
+input CreateUserCreditsInput {
+  id: Int
+  customerProfileId: String
+  subscriptionId: String
+  amount: String
+  description: String
+}
+
+type UserCredits {
+  id: Int
+  customerProfileId: String
+  subscriptionId: String
+  amount: String
+  description: String
+}
+
+input UpdateUserCreditsInput {
+  id: Int!
+  customerProfileId: String
+  subscriptionId: String
+  amount: String
+  description: String
+}
+
+type UserCreditsResultList {
+  items: [UserCredits]
+}
+
+type ChargeResultList {
+  items: [Charge]
+}
+
+input CreateCouponInput {
+  id: Int
+  couponType: String
+  name: String
+  code: String
+  percentageOff: String
+  amountOff: String
+  currency: String
+  redeemBy: String
+  duration: String
+  durationInMonth: String
+  couponApplyFor: String
+  couponAttachTo: String
+  active: String
+}
+
+type Coupon {
+  id: Int
+  couponType: String
+  name: String
+  code: String
+  percentageOff: String
+  amountOff: String
+  currency: String
+  redeemBy: String
+  duration: String
+  durationInMonth: String
+  couponApplyFor: String
+  couponAttachTo: String
+  active: String
+}
+
+input UpdateCouponInput {
+  id: Int!
+  couponType: String
+  name: String
+  code: String
+  percentageOff: String
+  amountOff: String
+  currency: String
+  redeemBy: String
+  duration: String
+  durationInMonth: String
+  couponApplyFor: String
+  couponAttachTo: String
+  active: String
+}
+
+type CouponResultList {
+  items: [Coupon]
+}
+
+type CouponPaginationResult {
+  items: [Coupon]
+  total: Int
+  total_pages: Int
+}
+
+
+
+input CreateCustomerCustomQueryInput {
+  id: Int!
+  userId: String
+  query: String
+  createdAt: String
+  name: String
+  filter: String
+}
+
+type CustomerCustomQuery {
+  id: Int!
+  userId: String
+  query: String
+  createdAt: String
+  name: String
+  filter: String
+}
+
+input UpdateCustomerCustomQueryInput {
+  id: Int!
+  userId: String
+  query: String
+  createdAt: String
+  name: String
+  filter: String
+}
+
+input CreateEnvVariablesInput {
+  id: Int
+  name: String
+  value: String
+}
+
+type EnvVariables {
+  id: Int!
+  name: String
+  value: String
+}
+
+input UpdateEnvVariablesInput {
+  id: Int!
+  name: String
+  value: String
+}
+
+type EnvVariablesList {
+  items: [EnvVariables]
+}
+
+input EnvVariablesListQuery {
+  query: String!
+}
+
+type EmailTemplate {
+  id: Int
+  subject: String
+  html : String
+  design: String
+}
+
+type Mutation {
+  deleteCity(id: Int!): City
+  createCity(createCityInput: CreateCityInput!): City
+  updateCity(updateCityInput: UpdateCityInput!): City
+  deleteCountry(id: Int!): Country
+  createCountry(createCountryInput: CreateCountryInput!): Country
+  updateCountry(updateCountryInput: UpdateCountryInput!): Country
+  deleteFeature(id: Int!): Feature
+  createFeature(createFeatureInput: CreateFeatureInput!): Feature
+  updateFeature(updateFeatureInput: UpdateFeatureInput!): Feature
+  deleteGeneralSetting(id: Int!): GeneralSetting
+  createGeneralSetting(
+    createGeneralSettingInput: CreateGeneralSettingInput!
+  ): GeneralSetting
+  updateGeneralSetting(
+    updateGeneralSettingInput: UpdateGeneralSettingInput!
+  ): GeneralSetting
+  deleteCustomerCustomQuery(id: Int!): CustomerCustomQuery
+  createCustomerCustomQuery(
+    createCustomerCustomQueryInput: CreateCustomerCustomQueryInput!
+  ): CustomerCustomQuery
+  updateCustomerCustomQuery(
+    updateCustomerCustomQueryInput: UpdateCustomerCustomQueryInput!
+  ): CustomerCustomQuery
+  deleteLicenseCategory(id: Int!): LicenseCategory
+  createLicenseCategory(
+    createLicenseCategoryInput: CreateLicenseCategoryInput!
+  ): LicenseCategory
+  updateLicenseCategory(
+    updateLicenseCategoryInput: UpdateLicenseCategoryInput!
+  ): LicenseCategory
+  deleteLicenseInformation(id: Int!): LicenseInformation
+  createLicenseInformation(
+    createLicenseInformationInput: CreateLicenseInformationInput!
+  ): LicenseInformation
+  updateLicenseInformation(
+    updateLicenseInformationInput: UpdateLicenseInformationInput!
+  ): LicenseInformation
+  deleteLicenseMainFilterList(id: Int!): LicenseMainFilterList
+  createLicenseMainFilterList(
+    createLicenseMainFilterListInput: CreateLicenseMainFilterListInput!
+  ): LicenseMainFilterList
+  updateLicenseMainFilterList(
+    updateLicenseMainFilterListInput: UpdateLicenseMainFilterListInput!
+  ): LicenseMainFilterList
+  deleteLicenseStatus(id: Int!): LicenseStatus
+  createLicenseStatus(
+    createLicenseStatusInput: CreateLicenseStatusInput!
+  ): LicenseStatus
+  updateLicenseStatus(
+    updateLicenseStatusInput: UpdateLicenseStatusInput!
+  ): LicenseStatus
+  deleteNote(id: Int!): Note
+  createNote(createNoteInput: CreateNoteInput!): Note
+  updateNote(updateNoteInput: UpdateNoteInput!): Note
+  deletePendingReport(id: Int!): PendingReport
+  createPendingReport(
+    createPendingReportInput: CreatePendingReportInput!
+  ): PendingReport
+  updatePendingReport(
+    updatePendingReportInput: UpdatePendingReportInput!
+  ): CreatePendingReportResult
+  deletePurchaseReport(id: Int!): PurchaseReport
+  createPurchaseReport(
+    createPurchaseReportInput: CreatePurchaseReportInput!
+  ): PurchaseReport
+  updatePurchaseReport(
+    updatePurchaseReportInput: UpdatePurchaseReportInput!
+  ): CreatePurchaseReportResult
+  deleteState(id: Int!): State
+  createState(createStateInput: CreateStateInput!): State
+  updateState(updateStateInput: UpdateStateInput!): State
+  deleteSubscriptionPlan(id: Int!): SubscriptionPlan
+  createSubscriptionPlan(
+    createSubscriptionPlanInput: CreateSubscriptionPlanInput!
+  ): SubscriptionPlan
+  updateSubscriptionPlan(
+    updateSubscriptionPlanInput: UpdateSubscriptionPlanInput!
+  ): SubscriptionPlan
+  deleteUser(id: Int!): User
+  createUser(createUserInput: CreateUserInput!): User
+  updateUser(updateUserInput: UpdateUserInput!): User
+  createPendingReportWithFilter(
+    createPendingReportInput: CreatePendingReportInput!
+  ): CreatePendingReportResult
+  createPurchaseReportWithFilter(
+    createPurchaseReportInput: CreatePurchaseReportInput!
+  ): CreatePurchaseReportResult
+  deleteAllLicenseInformation: LicenseInformation
+  deleteLicenseInformationByCSVRowUniqueKey(
+    csvRowUniqueKey: String!
+  ): LicenseInformation
+  createLicenseInformationWithBatch(
+    createLicenseInformationInputWithBatch: CreateLicenseInformationInputWithBatch!
+  ): LicenseInformation
+  deleteLicenseInformationWithBatch(query: String!): LicenseInformation
+  deletePricing(id: Int!): Pricing
+  createPricing(createPricingInput: CreatePricingInput!): Pricing
+  updatePricing(updatePricingInput: UpdatePricingInput!): Pricing
+  deleteProduct(id: Int!): Product
+  createProduct(createProductInput: CreateProductInput!): Product
+  updateProduct(updateProductInput: UpdateProductInput!): Product
+  deleteCharge(id: Int!): Charge
+  createCharge(createChargeInput: CreateChargeInput!): Charge
+  updateCharge(updateChargeInput: UpdateChargeInput!): Charge
+  deleteCanceledSubscription(id: Int!): CanceledSubscription
+  createCanceledSubscription(
+    createCanceledSubscriptionInput: CreateCanceledSubscriptionInput!
+  ): CanceledSubscription
+  updateCanceledSubscription(
+    updateCanceledSubscriptionInput: UpdateCanceledSubscriptionInput!
+  ): CanceledSubscription
+  deleteUserCredits(id: Int!): UserCredits
+  createUserCredits(
+    createUserCreditsInput: CreateUserCreditsInput!
+  ): UserCredits
+  updateUserCredits(
+    updateUserCreditsInput: UpdateUserCreditsInput!
+  ): UserCredits
+  deleteCoupon(id: Int!): Coupon
+  createCoupon(createCouponInput: CreateCouponInput!): Coupon
+  updateCoupon(updateCouponInput: UpdateCouponInput!): Coupon
+  deleteEnvVariables(id: Int!): EnvVariables
+  createEnvVariables(createEnvVariablesInput: CreateEnvVariablesInput!): EnvVariables
+  updateEnvVariables(updateEnvVariablesInput: UpdateEnvVariablesInput!): EnvVariables
+}
+
+type Query {
+  getCity(id: Int!): City
+  listCitys: [City]
+  getCountry(id: Int!): Country
+  listCountrys: [Country]
+  getCustomerCustomQuery(id: Int!): CustomerCustomQuery
+  listCustomerCustomQuerys: [CustomerCustomQuery]
+  getFeature(id: Int!): Feature
+  listFeatures: [Feature]
+  getGeneralSetting(id: Int!): GeneralSetting
+  listGeneralSettings: [GeneralSetting]
+  getLicenseCategory(id: Int!): LicenseCategory
+  listLicenseCategorys: [LicenseCategory]
+  getLicenseInformation(id: Int!): LicenseInformation
+  listLicenseInformations: [LicenseInformation]
+  getLicenseMainFilterList(id: Int!): LicenseMainFilterList
+  listLicenseMainFilterLists: [LicenseMainFilterList]
+  getLicenseStatus(id: Int!): LicenseStatus
+  listLicenseStatuss: [LicenseStatus]
+  getNote(id: Int!): Note
+  listNotes: [Note]
+  getPendingReport(id: Int!): PendingReport
+  listPendingReports: [PendingReport]
+  getPurchaseReport(id: Int!): PurchaseReport
+  listPurchaseReports: [PurchaseReport]
+  getState(id: Int!): State
+  listStates: [State]
+  getSubscriptionPlan(id: Int!): SubscriptionPlan
+  listSubscriptionPlans: [SubscriptionPlan]
+  getUser(id: Int!): User
+  listUsers: [User]
+  getUserByEmail(email: String!): User
+  countLicenseInformationsByCategory(
+    filter: String
+  ): CountLicenseInformationResult
+  listPendingReportsByDownloadStatus(
+    downloadStatus: String
+  ): DownloadPendingReportResult
+  listSubscriptionPlanByPlanTypeAndActive(
+    planType: String
+    active: String
+  ): SubscriptionPlanByFilterResult
+  listFeatureByPlanTypeAndActive(
+    subscriptionPlanId: String
+    active: String
+  ): FeatureByFilterResult
+  listLicenseInformationsPagination(
+    filter: String
+    orderBy: String
+    page: Int
+    size: Int
+  ): LicenseInformationResult
+  listPurchaseReportPagination(
+    filter: String
+    orderBy: String
+    page: Int
+    size: Int
+  ): PurchaseReportResult
+  listPendingReportPagination(
+    filter: String
+    orderBy: String
+    page: Int
+    size: Int
+  ): PendingReportResult
+  listUserPagination(
+    filter: String
+    orderBy: String
+    page: Int
+    size: Int
+  ): UserResult
+  listAllLicenseCategroy(filter: String): [LicenseCategoryResultList]
+  listAllLicenseStatus(filter: String): [LicenseStatusResultList]
+  listAllLicenseType(filter: String): [LicenseTypeResultList]
+  listAllBusinessCountry(filter: String): [BusinessCountryResultList]
+  listAllBusinessState(filter: String): [BusinessStateResultList]
+  listAllBusinessStructure(filter: String): [BusinessStructureResultList]
+  listAllCreatedAt(filter: String): [CreatedAtResultList]
+  listAllUpdatedAt(filter: String): [UpdatedAtResultList]
+  listProductByProductType(productType: String): ProductResultList
+  listPricingByProductAndUsageType(
+    usageType: String
+    currency: String
+    intervalTime: String
+    productId: String
+    active: String
+  ): PricingResultList
+  getPricing(id: Int!): Pricing
+  listPricings: [Pricing]
+  getProduct(id: Int!): Product
+  listProducts: [Product]
+  getCharge(id: Int!): Charge
+  listCharges: [Charge]
+  getCanceledSubscription(id: Int!): CanceledSubscription
+  listCanceledSubscriptions: [CanceledSubscription]
+  listCanceledSubscriptionBySubscriptionId(
+    subscriptionId: String
+  ): CanceledSubscriptionResultList
+  getUserCredits(id: Int!): UserCredits
+  listUserCredits: [UserCredits]
+  listUserCreditsByCustomerId(customerId: String): UserCreditsResultList
+  listUserByCustomerId(customerId: String): UserResultList
+  listUserByEmail(email: String): UserResultList
+  listUserByCustomerIdBatch(customerId: [String]): UserResultList
+  getCoupon(id: Int!): Coupon
+  listCoupons: [Coupon]
+  listCouponByCode(code: String, active: String): CouponResultList
+  listCouponsPagination(page: Int, size: Int): CouponPaginationResult
+  listEnvVariables: [EnvVariables]
+  getEnvVariables(id: Int!): EnvVariables
+  searchEnvVariables(EnvVariablesListQuery: EnvVariablesListQuery!): EnvVariablesList
+  searchEmailTemplate(event: String!): [EmailTemplate]
+  }
+
+type Subscription {
+  onCreateCity: City @aws_subscribe(mutations: ["createCity"])
+  onCreateCountry: Country @aws_subscribe(mutations: ["createCountry"])
+  onCreateFeature: Feature @aws_subscribe(mutations: ["createFeature"])
+  onCreateGeneralSetting: GeneralSetting
+    @aws_subscribe(mutations: ["createGeneralSetting"])
+  onCreateCustomerCustomQuery: CustomerCustomQuery
+    @aws_subscribe(mutations: ["createCustomerCustomQuery"])
+  onCreateLicenseCategory: LicenseCategory
+    @aws_subscribe(mutations: ["createLicenseCategory"])
+  onCreateLicenseInformation: LicenseInformation
+    @aws_subscribe(mutations: ["createLicenseInformation"])
+  onCreateLicenseMainFilterList: LicenseMainFilterList
+    @aws_subscribe(mutations: ["createLicenseMainFilterList"])
+  onCreateLicenseStatus: LicenseStatus
+    @aws_subscribe(mutations: ["createLicenseStatus"])
+  onCreateNote: Note @aws_subscribe(mutations: ["createNote"])
+  onCreatePendingReport: PendingReport
+    @aws_subscribe(mutations: ["createPendingReport"])
+  onCreatePurchaseReport: PurchaseReport
+    @aws_subscribe(mutations: ["createPurchaseReport"])
+  onCreateState: State @aws_subscribe(mutations: ["createState"])
+  onCreateSubscriptionPlan: SubscriptionPlan
+    @aws_subscribe(mutations: ["createSubscriptionPlan"])
+  onCreateUser: User @aws_subscribe(mutations: ["createUser"])
+  onCreatePricing: Pricing @aws_subscribe(mutations: ["createPricing"])
+  onCreateProduct: Product @aws_subscribe(mutations: ["createProduct"])
+  onCreateCharge: Charge @aws_subscribe(mutations: ["createCharge"])
+  onCreateCanceledSubscription: CanceledSubscription
+    @aws_subscribe(mutations: ["createCanceledSubscription"])
+  onCreateCoupon: Coupon @aws_subscribe(mutations: ["createCoupon"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

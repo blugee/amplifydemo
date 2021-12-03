@@ -1,0 +1,113 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-canoja-client-admin-2-staging-153424-authRole",
+      "UnauthRoleArn": "arn:aws:iam::030368565007:role/amplify-canoja-client-admin-2-staging-153424-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::030368565007:role/amplify-canoja-client-admin-2-staging-153424-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-canoja-client-admin-2-staging-153424-deployment",
+      "UnauthRoleName": "amplify-canoja-client-admin-2-staging-153424-unauthRole",
+      "StackName": "amplify-canoja-client-admin-2-staging-153424",
+      "StackId": "arn:aws:cloudformation:us-east-1:030368565007:stack/amplify-canoja-client-admin-2-staging-153424/2c052270-82a9-11eb-a1a9-0a042094dbc5",
+      "AmplifyAppId": "d34i7zfxxfpbpo"
+    },
+    "categories": {
+      "api": {
+        "CanojaVerifyLicenseDBAPI": {
+          "rdsRegion": "us-east-1",
+          "rdsClusterIdentifier": "arn:aws:rds:us-east-1:030368565007:cluster:canojaverifyauroracluster",
+          "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:030368565007:secret:rds-db-credentials/cluster-VWYT3HZQQ2H2ZIWJN7E2XPWKDU/Y8mpX7p1Nqnytaz0-aZJrr8",
+          "rdsDatabaseName": "CanojaVerifyLicenseDb"
+        }
+      },
+      "function": {
+        "CustomerRestAPI": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-staging-153424-deployment",
+          "s3Key": "amplify-builds/CustomerRestAPI-6a554662736c516c3474-build.zip"
+        },
+        "CanojaCronJob": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-staging-153424-deployment",
+          "s3Key": "amplify-builds/CanojaCronJob-47636b44524e5a467636-build.zip"
+        },
+        "CanojaPaymentGateway": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-staging-153424-deployment",
+          "s3Key": "amplify-builds/CanojaPaymentGateway-58306456366338573363-build.zip"
+        }
+      }
+    }
+  },
+  "qa": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-canoja-client-admin-2-qa-125911-authRole",
+      "UnauthRoleArn": "arn:aws:iam::697803204550:role/amplify-canoja-client-admin-2-qa-125911-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::697803204550:role/amplify-canoja-client-admin-2-qa-125911-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-canoja-client-admin-2-qa-125911-deployment",
+      "UnauthRoleName": "amplify-canoja-client-admin-2-qa-125911-unauthRole",
+      "StackName": "amplify-canoja-client-admin-2-qa-125911",
+      "StackId": "arn:aws:cloudformation:us-east-1:697803204550:stack/amplify-canoja-client-admin-2-qa-125911/c55ba260-85af-11eb-bade-0e918a040795",
+      "AmplifyAppId": "d3sk8060jjj1te"
+    },
+    "categories": {
+      "api": {
+        "CanojaVerifyLicenseDBAPI": {
+          "rdsRegion": "us-east-1",
+          "rdsClusterIdentifier": "arn:aws:rds:us-east-1:697803204550:cluster:canojaverifyauroracluster",
+          "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:697803204550:secret:rds-db-credentials/cluster-74W6YQSYJWUYJUGLMN5M3A2H5Q/Gy4cXIox5kXhUZJ7-Ropiyp",
+          "rdsDatabaseName": "CanojaVerifyLicenseDb"
+        }
+      },
+      "function": {
+        "CustomerRestAPI": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-qa-125911-deployment",
+          "s3Key": "amplify-builds/CustomerRestAPI-5879334132495a2b5065-build.zip"
+        },
+        "CanojaCronJob": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-qa-125911-deployment",
+          "s3Key": "amplify-builds/CanojaCronJob-4c4e566a4a666c457537-build.zip"
+        },
+        "CanojaPaymentGateway": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-qa-125911-deployment",
+          "s3Key": "amplify-builds/CanojaPaymentGateway-544d39364f68537a7947-build.zip"
+        }
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-canoja-client-admin-2-prod-152809-authRole",
+      "UnauthRoleArn": "arn:aws:iam::117531263069:role/amplify-canoja-client-admin-2-prod-152809-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::117531263069:role/amplify-canoja-client-admin-2-prod-152809-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-canoja-client-admin-2-prod-152809-deployment",
+      "UnauthRoleName": "amplify-canoja-client-admin-2-prod-152809-unauthRole",
+      "StackName": "amplify-canoja-client-admin-2-prod-152809",
+      "StackId": "arn:aws:cloudformation:us-east-1:117531263069:stack/amplify-canoja-client-admin-2-prod-152809/bede1bf0-868d-11eb-a9f3-0a9de142f3dd",
+      "AmplifyAppId": "dy0og2ojpb2qf"
+    },
+    "categories": {
+      "api": {
+        "CanojaVerifyLicenseDBAPI": {
+          "rdsRegion": "us-east-1",
+          "rdsClusterIdentifier": "arn:aws:rds:us-east-1:117531263069:cluster:canojaverifyauroracluster",
+          "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:117531263069:secret:rds-db-credentials/cluster-SDEETTZSX6RU4SX7F373E42EUE/Eg4bl1R8HIBjMCSk-m8quI7",
+          "rdsDatabaseName": "CanojaVerifyLicenseDb"
+        }
+      },
+      "function": {
+        "CustomerRestAPI": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-prod-152809-deployment",
+          "s3Key": "amplify-builds/CustomerRestAPI-6d3559726b7961797448-build.zip"
+        },
+        "CanojaCronJob": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-prod-152809-deployment",
+          "s3Key": "amplify-builds/CanojaCronJob-4c4e566a4a666c457537-build.zip"
+        },
+        "CanojaPaymentGateway": {
+          "deploymentBucketName": "amplify-canoja-client-admin-2-prod-152809-deployment",
+          "s3Key": "amplify-builds/CanojaPaymentGateway-544d39364f68537a7947-build.zip"
+        }
+      }
+    }
+  }
+}

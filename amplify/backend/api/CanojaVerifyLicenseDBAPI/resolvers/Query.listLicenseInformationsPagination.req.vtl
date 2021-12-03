@@ -1,0 +1,27 @@
+## calculate limit and offset 
+#set( $limit = $util.defaultIfNull($ctx.args.size, 5) )
+#set( $page = $util.defaultIfNull($ctx.args.page, 1)  )
+#set( $offset = ($page - 1) * $limit  )
+#set( $filter = $ctx.args.filter)
+#set( $orderBy = $ctx.args.orderBy)
+
+#if($util.isNull($ctx.args.filter))
+	#set( $filter = "active = 'true'")
+#end
+
+#if($util.isNull($ctx.args.orderBy))
+	#set( $orderBy = "licenseNumber ASC")
+#end
+
+$util.qr( $ctx.stash.put("limit", $limit) )
+{
+    "version": "2018-05-29",
+    "statements": [
+            "SELECT SQL_CALC_FOUND_ROWS * from LicenseInformation where $filter order by $orderBy limit :OFFSET, :LIMIT",
+	   "SELECT count(*) as total from LicenseInformation where $filter order by $orderBy "
+    ],
+    "variableMap": {
+    	":LIMIT": $limit,
+        ":OFFSET": $offset
+    }
+}

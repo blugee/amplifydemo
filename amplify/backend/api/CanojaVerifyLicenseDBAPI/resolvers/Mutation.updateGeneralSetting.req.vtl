@@ -1,0 +1,9 @@
+#set( $updateList = {} )
+#foreach( $entry in $ctx.args.updateGeneralSettingInput.keySet() )
+  #set( $discard = $updateList.put($entry, "'$ctx.args.updateGeneralSettingInput[$entry]'") )
+#end
+#set( $update = $updateList.toString().replace("{","").replace("}","") )
+{
+  "version": "2018-05-29",
+  "statements":   ["UPDATE GeneralSetting SET $update WHERE id=$ctx.args.updateGeneralSettingInput.id", "SELECT * FROM GeneralSetting WHERE id=$ctx.args.updateGeneralSettingInput.id"]
+}

@@ -1,0 +1,9 @@
+.header-button-content {
+    display: inline-block;
+    contain: content;
+  }
+
+  .ant-form-horizontal .ant-row {
+    margin-left: -15px;
+    margin-right: 0px;
+}
